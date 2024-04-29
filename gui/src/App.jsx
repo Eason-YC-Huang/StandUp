@@ -1,18 +1,21 @@
-import {useEffect, useState} from 'react'
-import axios from "axios";
+import {createBrowserRouter} from "react-router-dom";
+
+export const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <App/>
+    },
+    {
+        path: "/videos",
+        element: <div>This is videos page</div>
+    }
+]);
+
 
 function App() {
-    const [msg, setMsg] = useState("");
-
-    useEffect(() => {
-        axios.get(('/api/greeting'))
-            .then(res => res.data)
-            .then(data => setMsg(data));
-    }, []);
-
     return (
         <>
-            <h1 className={"text-red-500"}>{msg}</h1>
+            <h1>Hello World</h1>
         </>
     );
 }
