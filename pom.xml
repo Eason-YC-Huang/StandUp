@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ink.eason</groupId>
-    <artifactId>spring-vite-js</artifactId>
+    <artifactId>standup</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-vite-js</name>
-    <description>spring-vite-js</description>
+    <name>standUp</name>
+
     <properties>
         <java.version>21</java.version>
     </properties>
@@ -47,6 +47,12 @@
 
     <build>
         <plugins>
+
+            <plugin>
+                <groupId>org.graalvm.buildtools</groupId>
+                <artifactId>native-maven-plugin</artifactId>
+            </plugin>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
